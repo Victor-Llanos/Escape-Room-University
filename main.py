@@ -8,6 +8,7 @@ from Criptograma import Criptograma
 from Trivia import Trivia
 from Randnum import Randnum
 from Python import Python
+from Ahorcado import Ahorcado
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
 from Plaza import Plaza
@@ -20,17 +21,14 @@ import collections
 def main():
 
     players = []
-    rooms = []
-    cuenta1 = collections.Counter(rooms)
-    Player.registrar_player(players)
-
-    while True:
-        if players[0].vidas > 0:
-            Start_game.escapamet(rooms,players)
-
-
-
+    #rooms = []
+    #cuenta1 = collections.Counter(rooms)
     #Player.registrar_player(players)
+
+    #while True:
+    #    if players[0].vidas > 0:
+    #        Start_game.escapamet(rooms,players)
+
 
     #CUARTOS
 
@@ -60,6 +58,9 @@ def main():
     #adivinanza = Adivinanza(cuarto = 0, juego = 2)
     #adivinanza.game(players)
            
+    ahorcado = Ahorcado(cuarto = 1, juego = 0)
+    ahorcado.game(players)
+
     #criptograma = Criptograma(cuarto = 1, juego = 2)
     #criptograma.game(players)
     
