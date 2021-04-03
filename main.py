@@ -14,8 +14,8 @@ def main():
     players = []
     #Player.registrar_player(players)
 
-    python = Python(cuarto = 0, juego = 1)
-    python.game(players)
+    #python = Python(cuarto = 0, juego = 1)
+    #python.game(players)
 
     #adivinanza = Adivinanza(cuarto = 0, juego = 2)
     #adivinanza.game(players)
