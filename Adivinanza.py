@@ -28,7 +28,7 @@ class Adivinanza(Game):
             print(self.question,"\n")
             
             while True:
-                opc = input("¿Quieres otra una pista? Y/N: ").upper()
+                opc = input("¿Quieres una pista? Y/N: ").upper()
                 while opc != "Y" and opc != "N":
                     opc = input("Ingrese un valor valido: ")
 
