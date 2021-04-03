@@ -17,7 +17,7 @@ class Adivinanza(Game):
         print(self.requirement,"\n")
         intento = input("> ")
 
-        if intento == contraseña and not self.award in players[0].inventario:
+        if intento == contraseña and "contraseña" in players[0].inventario and not self.award in players[0].inventario:
             
             pistas = []
             pistas.append(self.clue["clue_1"])
