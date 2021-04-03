@@ -15,7 +15,7 @@ class Logica_emoji(Game):
     def game(self,players):
 
     
-        if "Mensaje: Si estas gradudado puedes pisar el Samán" in players[0].inventario and "Titulo Universitario" in players[0].inventario and not self.award in players[0].inventario: 
+        if "Mensaje: Si estas gradudado puedes pisar el Samán" in players[0].inventario and "título Universitario" in players[0].inventario and not self.award in players[0].inventario: 
             number = self.number
             print(self.name,"\n")
             #print("Reglas:",self.rules,"\n")
@@ -59,7 +59,7 @@ class Logica_emoji(Game):
                 else:
                     print("Incorrecto!!")
 
-        elif self.award in players[0].invetario:
+        elif self.award in players[0].inventario:
             print("Ya has completado este juego")
 
         else:

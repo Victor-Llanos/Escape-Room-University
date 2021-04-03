@@ -28,7 +28,11 @@ class Pasillo(Cuarto):
                  '-|                       _...--"                                     
                    '-.            _...--"                              
                       '-. _...--"                
-                
+            
+            Te encuentras en los Pasillo de Labs, Si... Ese olor es Sistemas 
+
+        Para inspeccionar la puerta que se encuentra en el centro. Press 1
+        
     Inserta R para ir a Biblioteca
     Inserta L para ir a Laboratorios
     '''
@@ -36,3 +40,4 @@ class Pasillo(Cuarto):
     def room(self,rooms):
         print(Pasillo.pasillo)
         rooms.append(self.name)
+        return rooms

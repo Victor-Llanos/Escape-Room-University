@@ -41,10 +41,18 @@ class Plaza(Cuarto):
                  \|       \|          .      ~,                     _
                                 .       .        .    ' '-.      .-         -      .  
 
-    Ten encuentras en el bello saman 
-    Inserta L para ir a Biblioteca
+                
+            Ten encuentras en el bello saman (No te montes en las ramas por favor)
+
+        Para inspeccionar el saman que se encuentra en el centro. Press 1
+        Para inspeccionar el banco que se encuentra a tu izquierda. Press 2
+        Para inspeccionar el banco que se encuentra a tu derecha. Press 3
+            
+        
+        Inserta L para ir a Biblioteca
     '''
 
     def room(self,rooms):
         print(Plaza.saman)
         rooms.append(self.name)
+        return rooms

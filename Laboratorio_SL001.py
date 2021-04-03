@@ -21,16 +21,19 @@ class Laboratorio_SL001(Cuarto):
         | /      |         |                                         |         |      \ |
         |/_____________________________________________________________________________\|
 
-
-    Te encuentras en la cueva de sistemas (tambien conocida como labs)
-    Inserta R para ir a Pasillo Laboratorios
-    Inserta L para ir a Cuarto de Servidores
+                Te encuentras en la sistemacueva (tambien conocida como labs)
+    
+        Para inspeccionar la pizarra que se encuentra en el centro. Press 1
+        Para inspeccionar la computadora que se encuentra a tu izquierda. Press 2
+        Para inspeccionar la computadora que se encuentra a tu derecha. Press 3
+        
+        Inserta R para ir a Pasillo Laboratorios
+        Inserta L para ir a Cuarto de Servidores
     ''' 
 
     def room(self,rooms):
         print(Laboratorio_SL001.lab)
         rooms.append(self.name)
-
         return rooms
 
     

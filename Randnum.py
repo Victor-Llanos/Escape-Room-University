@@ -8,6 +8,8 @@ api = requests.get("https://api-escapamet.vercel.app")
 class Randnum(Game):
     def __init__(self,cuarto,juego):
         super().__init__(cuarto,juego)
+        number = self.number
+        self.question = self.juego["game"]["questions"][number]["question"]
         
     def game(self,players):
 
@@ -34,7 +36,7 @@ class Randnum(Game):
                 if resp == ans:
                     print("Correcto!!")
                     print("Has conseguido:",self.award)
-                    #players[0].inventario.append(self.award)
+                    players[0].inventario.append(self.award)
                     break
 
                 elif resp < ans:

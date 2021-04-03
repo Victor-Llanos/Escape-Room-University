@@ -46,7 +46,7 @@ class Adivinanza(Game):
                     else:
                         print(pistas[0])
                         pistas.pop(0)
-                        #players[0].pistas -= 1
+                        players[0].pistas -= 1
                 else:
                     print("Chic@ valiente ¿eh?")
                     break
