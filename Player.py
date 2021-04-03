@@ -19,12 +19,9 @@ class Player:
             user = input("El username tiene que ser de entre 6 a 12 caracteres: ")  
 
         #if user in .txt:
-        #    confirmacion = ("Usuario encontrado en la base de datos, ingrese contraseña: ") 
+        #   confirmacion = print("Username ya en uso, ingrese otro username") 
         #    if confirmacion in .txt:
-        #        break
-        #    else: 
-        #        print("Ingreso de contraseña invalido, si es usted ingrese de nuevo mas tarde, si no es usted proceda crear otro personaje")
-        #        break
+        #   break
 
         password = input("Ingrese su contraseña: ")
         while (len(password) < 8):
