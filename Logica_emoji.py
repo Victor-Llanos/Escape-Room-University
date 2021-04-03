@@ -14,11 +14,8 @@ class Logica_emoji(Game):
 
     def game(self,players):
 
-        #ESTO SE VA ELIMINAR (LOS BOOLEANS)
-        titulo_universitario = True
-        mensaje = True
-        #if "título Universitario" in players[0].inventario and "Titulo Universitario" in players[0].inventario
-        if mensaje and titulo_universitario: 
+    
+        if "Mensaje: Si estas gradudado puedes pisar el Samán" in players[0].inventario and "Titulo Universitario" in players[0].inventario and not self.award in players[0].inventario: 
             number = self.number
             print(self.name,"\n")
             #print("Reglas:",self.rules,"\n")
@@ -36,10 +33,9 @@ class Logica_emoji(Game):
                         print("Ingrese un numero entero")                
                 if resp == 67:
 
-                    #PONLO EN INT MAMAVERGA Y VALIDALO CONTry
                     print("Correcto!!")
                     print("Has conseguido:",self.award)
-                    #players[0].inventario.append(self.award)
+                    players[0].inventario.append(self.award)
 
                 else:
                     print("Incorrecto!!")
@@ -58,13 +54,16 @@ class Logica_emoji(Game):
                 if resp == 41:
                     print("Correcto!!")
                     print("Has conseguido:",self.award)
-                    #players[0].inventario.append(self.award)
+                    players[0].inventario.append(self.award)
                 
                 else:
                     print("Incorrecto!!")
 
+        elif self.award in players[0].invetario:
+            print("Ya has completado este juego")
+
         else:
             print(api.json()[2]["objects"][0]["game"]["message_requirement"])
-            #players[0].vidas -= 1
+            players[0].vidas -= 1
 
 logica_emoji = Logica_emoji(cuarto = 2, juego = 0)

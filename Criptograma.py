@@ -13,10 +13,8 @@ class Criptograma(Game):
         self.desplazamiento = self.juego["game"]["questions"][number]["desplazamiento"]
 
     def game(self,players):
-        #ARREGLA LAS LETRAS ACENTUADAS
-        llave = True 
-        #if "llave" in players[0].inventario:
-        if llave:
+    
+        if "llave" in players[0].inventario and not self.award in players[0].inventario:
         
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
@@ -69,13 +67,16 @@ class Criptograma(Game):
             if resp == new_frase.translate(trans):
                 print("correcto!!")
                 print("Has conseguido:",self.award)
-                #players[0].inventario.append(self.award)
+                players[0].inventario.append(self.award)
 
             else:
                 print("incorrecto!!")
-                #players[0].vidas -= 1 
-
-        if not llave:
+                players[0].vidas -= 1 
+        
+        elif self.award in players[0].invetario:
+            print("Ya has completado este juego")
+      
+        else:
             print(api.json()[1]["objects"][2]["game"]["message_requirement"])
 
 criptograma = Criptograma(cuarto = 1, juego = 2)

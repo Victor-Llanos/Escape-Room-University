@@ -16,36 +16,42 @@ class Mezclada(Game):
 
     def game(self,players):
 
-        print(self.name)
-        print("Reglas:",self.rules,"\n")
-        print(self.question)
-        print("Categoria:",self.category,"\n")
 
-        for i in self.words:
-            self.desordenar = random.sample(i, len(i))
-            self.palabra = ''.join(self.desordenar)
-            print(">",self.palabra,"\n")
+        if self.award in players[0].inventario:
+            print("Ya has completado este juego")
 
-        respuesta = []
-
-        for i in self.words:
+        else:
             
-            while True:
-                resp = input("> ")
-                if resp in self.words:
-                    if resp in respuesta:
-                        print("Ya se respondio")
-                    else:
-                        respuesta.append(resp)
-                        print(respuesta)
+            print(self.name)
+            print("Reglas:",self.rules,"\n")
+            print(self.question)
+            print("Categoria:",self.category,"\n")
 
-                        if len(respuesta) == len(self.words):
-                            print("\nJuego completado\n") 
-                            print(self.award,":comunismonofunciona")
-                            #players[0].inventario.append(self.award)
-                        break
-                else:
-                    print("incorrecto")
-                    #players[0].vidas -= 0.5
+            for i in self.words:
+                self.desordenar = random.sample(i, len(i))
+                self.palabra = ''.join(self.desordenar)
+                print(">",self.palabra,"\n")
+
+            respuesta = []
+
+            for i in self.words:
+                
+                while True:
+                    resp = input("> ")
+                    if resp in self.words:
+                        if resp in respuesta:
+                            print("Ya se respondio")
+                        else:
+                            respuesta.append(resp)
+                            print(respuesta)
+
+                            if len(respuesta) == len(self.words):
+                                print("\nJuego completado\n") 
+                                print(self.award,":comunismonofunciona")
+                                players[0].inventario.append(self.award)
+                            break
+                    else:
+                        print("incorrecto")
+                        players[0].vidas -= 0.5
                     
 mezclada = Mezclada(cuarto = 4, juego = 1)

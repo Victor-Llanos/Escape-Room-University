@@ -15,9 +15,7 @@ class Python(Game):
  
     def game(self,players):
 
-        cable_HDMI = True
-        #if cable HDMI" in players[0].inventario:
-        if cable_HDMI:
+        if "cable HDMI" in players[0].inventario and not self.award in players[0].inventario:
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
             print(self.question)
@@ -44,7 +42,7 @@ class Python(Game):
                         else:
                             print(pistas[0])
                             pistas.pop(0)
-                            #players[0].pistas -= 1
+                            players[0].pistas -= 1
                     else:
                         print("Chic@ valiente ¿eh?")
                         break
@@ -59,15 +57,15 @@ class Python(Game):
     
                         print("Correcto!!")
                         print("Has conseguido:",self.award)
-                        #players[0].inventario.append(self.award)
+                        players[0].inventario.append(self.award)
                     
                     else: 
                         print("Incorrecto!!")
-                        #players[0].pistas -= 0.5
+                        players[0].pistas -= 0.5
 
                 else: 
                     print("Incorrecto!!")
-                    #players[0].pistas -= 0.5
+                    players[0].pistas -= 0.5
             
             else:
 
@@ -112,5 +110,11 @@ class Python(Game):
                 else: 
                     print("Incorrecto!!")
                     #players[0].pistas -= 0.5
+
+        elif self.award in players[0].inventario:
+            print("Ya has completado este juego")
+
+        else:
+            print(api.json()[0]["objects"][1]["game"]["message_requirement"])
 
 python = Python(cuarto = 0, juego = 1)

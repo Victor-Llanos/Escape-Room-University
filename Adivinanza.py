@@ -17,7 +17,8 @@ class Adivinanza(Game):
         print(self.requirement,"\n")
         intento = input("> ")
 
-        if intento == contraseña:
+        if intento == contraseña and not self.award in players[0].inventario:
+            
             pistas = []
             pistas.append(self.clue["clue_1"])
             pistas.append(self.clue["clue_2"])
@@ -26,6 +27,7 @@ class Adivinanza(Game):
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
             print(self.question,"\n")
+
             
             while True:
                 opc = input("¿Quieres una pista? Y/N: ").upper()
@@ -54,12 +56,15 @@ class Adivinanza(Game):
             if respuesta in self.answers:
                 print("correcto!!")
                 print("Has conseguido:",self.award)
-                #players[0].inventario.append(self.award)
+                players[0].inventario.append(self.award)
                 
             else: 
                 print("Incorrecto!!")
-                #players[0].vidas -= 0.5
+                players[0].vidas -= 0.5
 
+        elif self.award in players[0].inventario:
+            print("Ya has completado este juego")
+            
         else:  
             print(api.json()[0]["objects"][2]["game"]["message_requirement"])
 

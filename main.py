@@ -21,6 +21,8 @@ def main():
     players = []
     rooms = []
     cuenta1 = collections.Counter(rooms)
+
+    Player.registrar_player(players)
         
     while True:
 
@@ -89,7 +91,7 @@ def main():
                                     opc = input("Ingreso invalido, intente de nuevo: ").upper()
                                 
                                 if opc == "R":
-                                    pass
+                                    break
 
                                 elif opc == "1":
                                     pass
@@ -108,7 +110,8 @@ def main():
                             pass
 
                         else:
-                            pass
+                            adivinanza = Adivinanza(cuarto = 0, juego = 2)
+                            adivinanza.game(players)
                     
                 else:
                     pass

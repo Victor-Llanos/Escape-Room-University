@@ -15,10 +15,7 @@ class Logica_bool(Game):
 
     def game(self,players):
 
-        martillo = True
-
-        #if "martillo" in players[0].invetario: 
-        if martillo:
+        if "martillo" in players[0].inventario and not self.award in players[0].inventario:
             
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
@@ -29,13 +26,16 @@ class Logica_bool(Game):
             if resp == self.answer:
                 print("Correcto!!")
                 print("Has conseguido:",self.award)
-                #players[0].inventario.append(self.award)
+                players[0].inventario.append(self.award)
 
             else:
                 print("Incorrecto!!")
-                #players[0].vidas -= 0.5
+                players[0].vidas -= 0.5
+
+        elif self.award in players[0].inventario:
+            print("Ya has completado este juego")
                 
-        if not martillo:
+        else:
             print(api.json()[3]["objects"][0]["game"]["message_requirement"])
 
 logica_bool = Logica_bool(cuarto = 3, juego = 0)
