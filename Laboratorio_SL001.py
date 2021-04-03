@@ -33,7 +33,5 @@ class Laboratorio_SL001(Cuarto):
 
         return rooms
 
-
-
     
 laboratorio = Laboratorio_SL001(cuarto = 0) 

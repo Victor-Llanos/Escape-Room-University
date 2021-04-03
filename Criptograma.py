@@ -73,7 +73,7 @@ class Criptograma(Game):
                 print("incorrecto!!")
                 players[0].vidas -= 1 
         
-        elif self.award in players[0].invetario:
+        elif self.award in players[0].inventario:
             print("Ya has completado este juego")
       
         else:

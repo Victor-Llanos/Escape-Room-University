@@ -21,7 +21,7 @@ def main():
     players = []
     rooms = []
     cuenta1 = collections.Counter(rooms)
-
+    print(cuenta1)
     Player.registrar_player(players)
         
     while True:
@@ -29,6 +29,9 @@ def main():
         biblio = Biblioteca(cuarto = 1) 
         biblio.room(rooms)
         print(rooms)
+        cuenta1 = collections.Counter(rooms)
+        print(cuenta1)
+        
         opc = input("> ").upper()
         while opc != "R" and opc != "L" and opc != "1" and opc != "2" and opc != "3":
             opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -38,6 +41,8 @@ def main():
             plaza= Plaza(cuarto = 2) 
             plaza.room(rooms)
             print(rooms)
+            cuenta1 = collections.Counter(rooms)
+            print(cuenta1)
             while opc != "L" and opc != "1" and opc != "2" and opc != "3":
                 opc = input("Ingreso invalido, intente de nuevo: ").upper()
 
@@ -45,9 +50,13 @@ def main():
                 pass
 
             elif opc == "1":
-                pass
+                logica_emoji = Logica_emoji(cuarto = 2, juego = 0)
+                logica_emoji.game(players)
+            
             elif opc == "2":
-                pass
+                trivia = Trivia(cuarto = 2, juego = 1)
+                trivia.game(players)
+
             else:
                 pass
 
@@ -58,6 +67,8 @@ def main():
                 pasillo = Pasillo(cuarto = 3) 
                 pasillo.room(rooms)
                 print(rooms)
+                cuenta1 = collections.Counter(rooms)
+                print(cuenta1)
                 opc = input("> ").upper()
                 while opc != "R" and opc != "L" and opc != "1":
                     opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -72,6 +83,8 @@ def main():
                         laboratorio = Laboratorio_SL001(cuarto = 0) 
                         laboratorio.room(rooms)
                         print(rooms)
+                        cuenta1 = collections.Counter(rooms)
+                        print(cuenta1)
                         opc = input("> ").upper()
                         while opc != "R" and opc != "L" and opc != "1" and opc != "2" and opc != "3":
                             opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -86,6 +99,8 @@ def main():
                                 servidores= Servidores(cuarto = 4) 
                                 servidores.room(rooms)
                                 print(rooms)
+                                cuenta1 = collections.Counter(rooms)
+                                print(cuenta1)
                                 opc = input("> ").upper()
                                 while opc != "R" and opc != "1" and opc != "2" and opc != "3":
                                     opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -101,20 +116,23 @@ def main():
                                     mezclada.game(players)
 
                                 else:
-                                    pass
+                                    randnum = Randnum(cuarto = 4, juego = 2)
+                                    randnum.game(players)
 
                         elif opc == "1":
                             pass
 
                         elif opc == "2":
-                            pass
+                            python = Python(cuarto = 0, juego = 1)
+                            python.game(players)
 
                         else:
                             adivinanza = Adivinanza(cuarto = 0, juego = 2)
                             adivinanza.game(players)
                     
                 else:
-                    pass
+                    logica_bool = Logica_bool(cuarto = 3, juego = 0)
+                    logica_bool.game(players)
 
         elif opc == "1":
             pass
@@ -123,7 +141,8 @@ def main():
             pass
         
         else:
-            pass
+            criptograma = Criptograma(cuarto = 1, juego = 2)
+            criptograma.game(players)
 
 
     #Player.registrar_player(players)
