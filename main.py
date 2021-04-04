@@ -9,6 +9,7 @@ from Trivia import Trivia
 from Randnum import Randnum
 from Python import Python
 from Ahorcado import Ahorcado
+from Sopa import Sopa
 from Cuarto import Cuarto
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
@@ -151,10 +152,10 @@ def escapamet(rooms,players):
 
 def main():
 
-    rooms = []
+    #rooms = []
     players = []
-    Player.registrar_player(players)
-    escapamet(rooms,players)
+    #Player.registrar_player(players)
+    #escapamet(rooms,players)
     #cuenta1 = collections.Counter(rooms)
  
 
@@ -184,6 +185,9 @@ def main():
     #print(cuenta1)
 
     #JUEGOS
+
+    sopa = Sopa(cuarto = 0, juego = 0)
+    sopa.game(players)
 
     #python = Python(cuarto = 0, juego = 1)
     #python.game(players)
