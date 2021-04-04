@@ -30,7 +30,7 @@ class Ahorcado(Game):
             pistas.append(self.clue["clue_2"])
             pistas.append(self.clue["clue_3"])
             Game.pistas(players,pistas)
-        
+            
             while True:
         
                 for i in self.answer.lower():

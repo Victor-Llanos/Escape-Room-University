@@ -15,7 +15,7 @@ class Logica_bool(Game):
 
     def game(self,players):
 
-        if "martillo" in players[0].inventario and not self.award in players[0].inventario:
+        if "martillo" in players[0].inventario and not "vida_bool" in players[0].inventario:
             
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
@@ -26,8 +26,8 @@ class Logica_bool(Game):
             if resp == self.answer:
                 print("Correcto!!")
                 print("Has conseguido:",self.award)
-                players[0].inventario.append(self.award)
-
+                players[0].inventario.append("vida_bool")
+                players[0].vidas += 1
             else:
                 print("Incorrecto!!")
                 players[0].vidas -= 0.5

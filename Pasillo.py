@@ -37,7 +37,43 @@ class Pasillo(Cuarto):
     Inserta L para ir a Laboratorios
     '''
 
-    def room(self,rooms):
-        print(Pasillo.pasillo)
-        rooms.append(self.name)
-        return rooms
+    pasillo_2 = '''
+
+                                                        _...--""|'-.
+                                                _...--"         |   '-.
+                                        _...--"                 |      '-.
+                                _...--"                         |         '-.
+                        _...--"                                 |      |'.   '-.
+                _...--"          _..--¨"|                       |      |  '-.   '-.
+         ...--"                 |\      |                       |      |    |      |
+        |                       | \     |                _...--" '-.   |    |      |
+        |                       |  \    |        _...--"            '-.|   °|      |
+        |                       |  |    |_...--"                       '.   |      |
+        |                       |  |.--"                                 '-.|      |        
+        |     |'-._       _...--\  |                                         '-.   |     
+        |     |    |..--"        \ |                                            '-.|
+        |_...-|    |          ,   \|                                       _...--""            
+        '-.   |    |          []                                   _...--"                   
+           '-.|    |                                       _...--"                              
+              '-.  |                               _...--"                                       
+                 '-|                       _...--"                                     
+                   '-.            _...--"                              
+                      '-. _...--"                
+            
+            Te encuentras en los Pasillo de Labs, Si... Ese olor es Sistemas 
+
+        Para inspeccionar la puerta que se encuentra en el centro. Press 1
+        
+    Inserta R para ir a Biblioteca
+    Inserta L para ir a Laboratorios
+    ''' 
+
+    def room(self,rooms,players):
+        if not api.json()[3]["objects"][0]["game"]["award"] in players[0].inventario:
+            print(Pasillo.pasillo)
+            rooms.append(self.name)
+            return rooms
+        else: 
+            print(Pasillo.pasillo_2)
+            rooms.append(self.name)
+            return rooms

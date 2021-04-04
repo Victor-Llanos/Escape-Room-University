@@ -123,8 +123,8 @@ def escapamet(rooms,players):
                                     randnum.game(players)
 
                         elif opc == "1":
-                            #sopa = Sopa(cuarto = 0, juego = 0)
-                            #sopa.game(players)
+                            sopa = Sopa(cuarto = 0, juego = 0)
+                            sopa.game(players)
                             pass
                         elif opc == "2":
                             python = Python(cuarto = 0, juego = 1)
@@ -190,8 +190,8 @@ def main():
     #sopa = Sopa(cuarto = 0, juego = 0)
     #sopa.game(players)
 
-    python = Python(cuarto = 0, juego = 1)
-    python.game(players)
+    #python = Python(cuarto = 0, juego = 1)
+    #python.game(players)
 
     #adivinanza = Adivinanza(cuarto = 0, juego = 2)
     #adivinanza.game(players)

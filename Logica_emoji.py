@@ -39,6 +39,7 @@ class Logica_emoji(Game):
 
                 else:
                     print("Incorrecto!!")
+                    players[0].vidas -= 1
                     
             else:
                 print(self.questions[number]) 
@@ -58,6 +59,7 @@ class Logica_emoji(Game):
                 
                 else:
                     print("Incorrecto!!")
+                    players[0].vidas -= 1
 
         elif self.award in players[0].inventario:
             print("Ya has completado este juego")
