@@ -11,6 +11,7 @@ class Criptograma(Game):
         number = self.number
         self.question = self.juego["game"]["questions"][number]["question"]
         self.desplazamiento = self.juego["game"]["questions"][number]["desplazamiento"]
+        self.message_requirement = self.juego["game"]["message_requirement"]
 
     def game(self,players):
     
@@ -77,6 +78,6 @@ class Criptograma(Game):
             print("Ya has completado este juego")
       
         else:
-            print(api.json()[1]["objects"][2]["game"]["message_requirement"])
+            print(self.message_requirement)
 
 criptograma = Criptograma(cuarto = 1, juego = 2)

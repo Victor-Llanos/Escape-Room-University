@@ -190,11 +190,11 @@ def main():
     #sopa = Sopa(cuarto = 0, juego = 0)
     #sopa.game(players)
 
-    #python = Python(cuarto = 0, juego = 1)
-    #python.game(players)
+    python = Python(cuarto = 0, juego = 1)
+    python.game(players)
 
-    adivinanza = Adivinanza(cuarto = 0, juego = 2)
-    adivinanza.game(players)
+    #adivinanza = Adivinanza(cuarto = 0, juego = 2)
+    #adivinanza.game(players)
            
     #ahorcado = Ahorcado(cuarto = 1, juego = 0)
     #ahorcado.game(players)

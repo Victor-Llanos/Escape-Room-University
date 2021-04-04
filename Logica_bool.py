@@ -11,7 +11,7 @@ class Logica_bool(Game):
         number = self.number
         self.question = self.juego["game"]["questions"][number]["question"]
         self.answer = self.juego["game"]["questions"][number]["answer"]
-        
+        self.message_requirement = self.juego["game"]["message_requirement"]
 
     def game(self,players):
 
@@ -36,6 +36,6 @@ class Logica_bool(Game):
             print("Ya has completado este juego")
                 
         else:
-            print(api.json()[3]["objects"][0]["game"]["message_requirement"])
+            print(self.message_requirement)
 
 logica_bool = Logica_bool(cuarto = 3, juego = 0)

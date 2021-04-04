@@ -12,10 +12,11 @@ class Python(Game):
         self.question = self.juego["game"]["questions"][number]["question"]
         self.answer = self.juego["game"]["questions"][number]["answer"]
         self.clue = self.questions[number]
+        self.message_requirement = self.juego["game"]["message_requirement"]
  
     def game(self,players):
 
-        if not self.award in players[0].inventario:
+        if not self.award in players[0].inventario and self.requirement in players[0].inventario:
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
             print(self.question)
@@ -79,6 +80,6 @@ class Python(Game):
             print("Ya has completado este juego")
 
         else:
-            print(api.json()[0]["objects"][1]["game"]["message_requirement"])
+            print(self.message_requirement)
 
 python = Python(cuarto = 0, juego = 1)
