@@ -21,7 +21,6 @@ class Randnum(Game):
             ans = random.randint(1,15)
             print(self.name)
             print("Reglas:",self.rules,"\n")
-            print(ans)
 
             while True:
                 print(self.question,"\n")
