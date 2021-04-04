@@ -32,7 +32,7 @@ class Ahorcado(Game):
                         print(i,end="")
             
                     else:
-                        print("🥵 ",end="")
+                        print("🥵",end=" ")
 
                 resp = input("\nIngrese una letra: ")
 
