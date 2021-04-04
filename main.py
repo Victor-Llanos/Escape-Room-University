@@ -9,7 +9,7 @@ from Trivia import Trivia
 from Randnum import Randnum
 from Python import Python
 from Ahorcado import Ahorcado
-from Sopa import Sopa
+#from Sopa import Sopa
 from Cuarto import Cuarto
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
@@ -154,7 +154,7 @@ def main():
 
     #rooms = []
     players = []
-    #Player.registrar_player(players)
+    Player.registrar_player(players)
     #escapamet(rooms,players)
     #cuenta1 = collections.Counter(rooms)
  
@@ -186,8 +186,8 @@ def main():
 
     #JUEGOS
 
-    sopa = Sopa(cuarto = 0, juego = 0)
-    sopa.game(players)
+    #sopa = Sopa(cuarto = 0, juego = 0)
+    #sopa.game(players)
 
     #python = Python(cuarto = 0, juego = 1)
     #python.game(players)
@@ -195,8 +195,8 @@ def main():
     #adivinanza = Adivinanza(cuarto = 0, juego = 2)
     #adivinanza.game(players)
            
-    #ahorcado = Ahorcado(cuarto = 1, juego = 0)
-    #ahorcado.game(players)
+    ahorcado = Ahorcado(cuarto = 1, juego = 0)
+    ahorcado.game(players)
 
     #criptograma = Criptograma(cuarto = 1, juego = 2)
     #criptograma.game(players)

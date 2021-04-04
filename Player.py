@@ -58,7 +58,7 @@ class Player:
         
 
         if dificultad == "1":
-            print("Nuevo? o es que tienes miedo?")
+            print("Nuevo? o es que tienes miedo?\n")
             dificultad = "Facil"
             vidas = 5.0
             pistas = 5
@@ -68,7 +68,7 @@ class Player:
             return players
 
         elif dificultad == "2":
-            print("Esta bien para comenzar.")
+            print("Esta bien para comenzar.\n")
             dificultad = "Media"
             vidas = 3.0
             pistas = 3
@@ -78,7 +78,7 @@ class Player:
             return players
 
         else:
-            print("Pues anda, que tenemos un valiente. Suerte... La necesitaras.")
+            print("Pues anda, que tenemos un valiente. Suerte... La necesitaras.\n")
             dificultad = "Dificil"
             vidas = 1.0
             pistas = 2
