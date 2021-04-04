@@ -51,7 +51,6 @@ class Plaza(Cuarto):
         
         Inserta L para ir a Biblioteca
     '''
-
     def room(self,rooms):
         print(Plaza.saman)
         rooms.append(self.name)

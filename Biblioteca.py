@@ -9,7 +9,7 @@ class Biblioteca(Cuarto):
     biblio = '''
          ---------------------------------------------------------------------------
         |   |                                                                   |   |
-        | /||                     ______________________________                ||\ |
+        | /||                     ______________________________                ||\ | 
         || ||                    |                              |      ____     || ||
         || ||                    |       0                      |     |\____\   || ||
         || ||                    |_____/|_|\____________________|     ||    |   || ||
@@ -29,7 +29,6 @@ class Biblioteca(Cuarto):
         Inserta R para ir al Saman
         Inserta L para ir a Pasillo Laboratorios
     ''' 
-
     def room(self,rooms):
         print(Biblioteca.biblio)
         rooms.append(self.name)

@@ -8,6 +8,7 @@ from Criptograma import Criptograma
 from Trivia import Trivia
 from Randnum import Randnum
 from Python import Python
+from Ahorcado import Ahorcado
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
 from Plaza import Plaza
@@ -60,7 +61,9 @@ class Start_game:
                 elif opc == "2":
                     trivia = Trivia(cuarto = 2, juego = 1)
                     trivia.game(players)
-
+                    if players[0].vidas == 0:
+                        print("endgame")
+                        break
                 else:
                     pass
 
@@ -139,7 +142,8 @@ class Start_game:
                         logica_bool.game(players)
 
             elif opc == "1":
-                pass
+                ahorcado = Ahorcado(cuarto = 1, juego = 0)
+                ahorcado.game(players)
             
             elif opc == "2":
                 pass

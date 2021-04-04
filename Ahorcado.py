@@ -14,33 +14,49 @@ class Ahorcado(Game):
 
     def game(self,players):
         
-        #if self.award in players[0].inventario:
-        #    print("Ya has completado este juego")
+        if self.award in players[0].inventario:
+            print("Ya has completado este juego")
 
-        print(self.name,"\n")
-        print("Reglas:",self.rules,"\n")
-        print(self.question)
-        cambio = "🥵 " * len(self.answer) 
-        print(cambio)
-
-        respuestas = []
-
-        while True:
-            resp = input("> ")
-
-            if len(resp) > 1 or len(resp) < 1:
-                print("No ingrese mas de una letras hasta terminar el juego") 
+        else:
+            print(self.name,"\n")
+            print("Reglas:",self.rules,"\n")
+            print(self.question,"\n")
+            respuestas = []
+            answer = set(self.answer.lower())
             
-            elif resp in self.answer:
-                respuestas.append(resp)
-                print(respuestas)
-
-                if resp in respuestas:
-                    print("Ya usaste esa letra")
-
-            else:
-                print("incorrecto")
-
-
+            while True:
         
+                for i in self.answer.lower():
+                    
+                    if i in respuestas:
+                        print(i,end="")
+            
+                    else:
+                        print("🥵 ",end="")
+
+                resp = input("\nIngrese una letra: ")
+
+                if len(resp) > 1 or len(resp) < 1:
+                    print("Ingrese letra por letra")
+                
+                elif resp in respuestas:
+                    print("Letra ya introducida")
+
+                elif not resp in respuestas and resp in self.answer.lower():
+                    respuestas.append(resp)
+                    answer.remove(resp)
+                    if answer == set():
+                        print(self.answer.lower())
+                        print("Ganaste!!")
+                        print("Has conseguido:",self.award)
+                        players[0].inventario.append(self.award)
+                        break
+
+                elif not resp in self.answer.lower():
+                    print("incorrecto!!")
+                    players[0].vidas -= 0.25
+
+                else:
+                    print("")
+
 ahorcado = Ahorcado(cuarto = 1, juego = 0)
