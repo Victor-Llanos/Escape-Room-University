@@ -11,6 +11,7 @@ class Ahorcado(Game):
         number = self.number
         self.question = self.juego["game"]["questions"][number]["question"]
         self.answer = self.juego["game"]["questions"][number]["answer"]
+        self.clue = self.questions[number]
 
     def game(self,players):
         
@@ -23,7 +24,13 @@ class Ahorcado(Game):
             print(self.question,"\n")
             respuestas = []
             answer = set(self.answer.lower())
-            
+
+            pistas = []
+            pistas.append(self.clue["clue_1"])
+            pistas.append(self.clue["clue_2"])
+            pistas.append(self.clue["clue_3"])
+            Game.pistas(players,pistas)
+        
             while True:
         
                 for i in self.answer.lower():

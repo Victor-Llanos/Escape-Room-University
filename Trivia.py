@@ -30,27 +30,7 @@ class Trivia(Game):
 
             pistas = []
             pistas.append(self.clue["clue_1"])
-
-            while True:
-                opc = input("¿Quieres otra una pista? Y/N: ").upper()
-                while opc != "Y" and opc != "N":
-                    opc = input("Ingrese un valor valido: ")
-
-                if opc == "Y":
-                    if pistas == []:
-                        print("Se acabaron las pistas ;c ... Escribe tu respuesta")
-                        break
-
-                    elif players[0].pistas == 0:
-                            print("Se te acabaron tus oportunidades de pistas")
-
-                    else:
-                        print(pistas[0])
-                        pistas.pop(0)
-                        #players[0].pistas -= 1
-                else:
-                    print("Chic@ valiente ¿eh?")
-                    break
+            Game.pistas(players,pistas) 
 
             resp = input("> ").upper()
             while resp != "A" and resp != "B" and resp != "C" and resp != "D":

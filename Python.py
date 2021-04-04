@@ -15,7 +15,7 @@ class Python(Game):
  
     def game(self,players):
 
-        if "cable HDMI" in players[0].inventario and not self.award in players[0].inventario:
+        if not self.award in players[0].inventario:
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
             print(self.question)
@@ -25,27 +25,7 @@ class Python(Game):
 
                 pistas = []
                 pistas.append(self.clue["clue_1"])
-
-                while True:
-                    opc = input("¿Quieres otra una pista? Y/N: ").upper()
-                    while opc != "Y" and opc != "N":
-                        opc = input("Ingrese un valor valido: ")
-
-                    if opc == "Y":
-                        if pistas == []:
-                            print("Se acabaron las pistas ;c ... Escribe tu respuesta")
-                            break
-
-                        elif players[0].pistas == 0:
-                            print("Se te acabaron tus oportunidades de pistas") 
-
-                        else:
-                            print(pistas[0])
-                            pistas.pop(0)
-                            players[0].pistas -= 1
-                    else:
-                        print("Chic@ valiente ¿eh?")
-                        break
+                Game.pistas(players,pistas) 
 
                 resp = input("> ")
                 frase = "oidutse ne al ortem aireinegni ed sametsis"
@@ -73,23 +53,7 @@ class Python(Game):
                 pistas.append(self.clue["clue_1"])
                 pistas.append(self.clue["clue_2"])
                 pistas.append(self.clue["clue_3"]) 
-                
-                while True:
-                    opc = input("¿Quieres otra una pista? Y/N: ").upper()
-                    while opc != "Y" and opc != "N":
-                        opc = input("Ingrese un valor valido: ")
-
-                    if opc == "Y":
-                        if pistas == []:
-                            print("Se acabaron las pistas ;c ... Escribe tu respuesta")
-                            break
-                        else:
-                            print(pistas[0])
-                            pistas.pop(0)
-                            #players[0].pistas -= 1
-                    else:
-                        print("Chic@ valiente ¿eh?")
-                        break
+                Game.pistas(players,pistas) 
 
                 resp = input("> ")
                 frase = "tengo en mi cuenta 50,00 $"

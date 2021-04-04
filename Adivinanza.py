@@ -11,6 +11,7 @@ class Adivinanza(Game):
         self.question = self.juego["game"]["questions"][number]["question"]
         self.answers = self.juego["game"]["questions"][number]["answers"]
         self.clue = self.questions[number]
+        self.message_requirement = self.juego["game"]["message_requirement"]
 
     def game(self,players):
         contraseña = "comunismonofunciona"
@@ -27,30 +28,8 @@ class Adivinanza(Game):
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
             print(self.question,"\n")
-
+            Game.pistas(players,pistas) 
             
-            while True:
-                opc = input("¿Quieres una pista? Y/N: ").upper()
-                while opc != "Y" and opc != "N":
-                    opc = input("Ingrese un valor valido: ")
-
-                if opc == "Y":
-                    if pistas == []:
-                        print("Se acabaron las pistas ;c ... Escribe tu respuesta")
-                        break
-
-                    elif players[0].pistas == 0:
-                        print("Se te acabaron tus oportunidades de pistas")
-                        break
-                    
-                    else:
-                        print(pistas[0])
-                        pistas.pop(0)
-                        players[0].pistas -= 1
-                else:
-                    print("Chic@ valiente ¿eh?")
-                    break
-
             respuesta = input("> ")
 
             if respuesta in self.answers:
@@ -66,7 +45,7 @@ class Adivinanza(Game):
             print("Ya has completado este juego")
             
         else:  
-            print(api.json()[0]["objects"][2]["game"]["message_requirement"])
+            print(self.message_requirement)
 
 adivinanza = Adivinanza(cuarto = 0, juego = 2)
      

@@ -9,7 +9,7 @@ from Trivia import Trivia
 from Randnum import Randnum
 from Python import Python
 from Ahorcado import Ahorcado
-#from Sopa import Sopa
+from Sopa import Sopa
 from Cuarto import Cuarto
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
@@ -123,8 +123,9 @@ def escapamet(rooms,players):
                                     randnum.game(players)
 
                         elif opc == "1":
+                            #sopa = Sopa(cuarto = 0, juego = 0)
+                            #sopa.game(players)
                             pass
-
                         elif opc == "2":
                             python = Python(cuarto = 0, juego = 1)
                             python.game(players)
@@ -192,11 +193,11 @@ def main():
     #python = Python(cuarto = 0, juego = 1)
     #python.game(players)
 
-    #adivinanza = Adivinanza(cuarto = 0, juego = 2)
-    #adivinanza.game(players)
+    adivinanza = Adivinanza(cuarto = 0, juego = 2)
+    adivinanza.game(players)
            
-    ahorcado = Ahorcado(cuarto = 1, juego = 0)
-    ahorcado.game(players)
+    #ahorcado = Ahorcado(cuarto = 1, juego = 0)
+    #ahorcado.game(players)
 
     #criptograma = Criptograma(cuarto = 1, juego = 2)
     #criptograma.game(players)
