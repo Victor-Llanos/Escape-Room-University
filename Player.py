@@ -66,8 +66,8 @@ class Player:
             vidas = 5.0                                                                  
             pistas = 5
             player = Player(user,password,age,avatar,dificultad,vidas,pistas,inventario)
-            players.append(player)
-            player.mostrar()
+            player = {'User': user, 'Password': password, 'Age': age, "Avatar": avatar, "Dificultad": dificultad, "Vidas": vidas, "Pistas": pistas, "Inventario": inventario}
+            players[user] = player
             print(graphics.narr1)
             return players
 
@@ -77,8 +77,8 @@ class Player:
             vidas = 3.0
             pistas = 3
             player = Player(user,password,age,avatar,dificultad,vidas,pistas, inventario)
-            players.append(player)
-            player.mostrar()
+            player = {'User': user, 'Password': password, 'Age': age, "Avatar": avatar, "Dificultad": dificultad, "Vidas": vidas, "Pistas": pistas, "Inventario": inventario}
+            players[user] = player
             print(graphics.narr1)
             return players
 
@@ -88,8 +88,8 @@ class Player:
             vidas = 1.0
             pistas = 2
             player = Player(user,password,age,avatar,dificultad,vidas,pistas, inventario)
-            players.append(player)
-            player.mostrar()
+            player = {'User': user, 'Password': password, 'Age': age, "Avatar": avatar, "Dificultad": dificultad, "Vidas": vidas, "Pistas": pistas, "Inventario": inventario}
+            players[user] = player
             print(graphics.narr1)
             return players
 

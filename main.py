@@ -161,8 +161,8 @@ def escapamet(rooms,players):
 
 def main():
 
-    rooms = {}
-    players = {}
+    rooms = []
+    players= {}
 
     while True:
         print(graphics.menu)
@@ -172,7 +172,7 @@ def main():
 
         if selc == "1":
             Player.registrar_player(players)
-            
+            print(players.vidas)
             #escapamet(rooms,players)
 
         elif selc == "2":
