@@ -17,7 +17,7 @@ class Adivinanza(Game):
         contraseña = "comunismonofunciona"
         print(self.requirement,"\n")
         intento = input("> ")
-
+        
         if intento == contraseña and "contraseña" in players[0].inventario and not self.award in players[0].inventario:
             
             pistas = []
@@ -40,6 +40,7 @@ class Adivinanza(Game):
             else: 
                 print("Incorrecto!!")
                 players[0].vidas -= 0.5
+                print("Vidas restante",players[0].vidas)
 
         elif self.award in players[0].inventario:
             print("Ya has completado este juego")

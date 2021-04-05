@@ -40,6 +40,7 @@ class Logica_emoji(Game):
                 else:
                     print("Incorrecto!!")
                     players[0].vidas -= 1
+                    print("Vidas restante",players[0].vidas)
                     
             else:
                 print(self.questions[number]) 
@@ -60,6 +61,7 @@ class Logica_emoji(Game):
                 else:
                     print("Incorrecto!!")
                     players[0].vidas -= 1
+                    print("Vidas restante",players[0].vidas)
 
         elif self.award in players[0].inventario:
             print("Ya has completado este juego")

@@ -39,10 +39,11 @@ class Trivia(Game):
             if resp == "A":
                 print("Correcto!!")
                 print("Has conseguido:",self.award)
-                #players[0].inventario.append(self.award)
+                players[0].inventario.append(self.award)
                 
             else:
                 print("Incorrecto!!")
-                #players[0].vidas -= 0.5
+                players[0].vidas -= 0.5
+                print("Vidas restante",players[0].vidas)
 
 trivia = Trivia(cuarto = 2, juego = 1)

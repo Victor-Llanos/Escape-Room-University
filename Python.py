@@ -43,10 +43,12 @@ class Python(Game):
                     else: 
                         print("Incorrecto!!")
                         players[0].pistas -= 0.5
+                        print("Vidas restante",players[0].vidas)
 
                 else: 
                     print("Incorrecto!!")
                     players[0].pistas -= 0.5
+                    print("Vidas restante",players[0].vidas)
             
             else:
 
@@ -66,15 +68,17 @@ class Python(Game):
                     if eval(resp) == new_frase: 
                         print("Correcto!!")
                         print("Has conseguido:",self.award)
-                        #players[0].inventario.append(self.award)
+                        players[0].inventario.append(self.award)
                     
                     else: 
                         print("Incorrecto!!")
-                        #players[0].pistas -= 0.5
+                        players[0].pistas -= 0.5
+                        print("Vidas restante",players[0].vidas)
 
                 else: 
                     print("Incorrecto!!")
-                    #players[0].pistas -= 0.5
+                    players[0].pistas -= 0.5
+                    print("Vidas restante",players[0].vidas)
 
         elif self.award in players[0].inventario:
             print("Ya has completado este juego")

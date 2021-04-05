@@ -53,5 +53,6 @@ class Mezclada(Game):
                     else:
                         print("incorrecto")
                         players[0].vidas -= 0.5
+                        print("Vidas restante",players[0].vidas)
                     
 mezclada = Mezclada(cuarto = 4, juego = 1)

@@ -62,6 +62,9 @@ class Ahorcado(Game):
                 elif not resp in self.answer.lower():
                     print("incorrecto!!")
                     players[0].vidas -= 0.25
+                    print("Vidas restante",players[0].vidas)
+                    if players[0].vidas == 0 or players[0].vidas < 0:
+                        break
 
                 else:
                     print("")

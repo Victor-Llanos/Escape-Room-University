@@ -72,8 +72,8 @@ class Pasillo(Cuarto):
         if not api.json()[3]["objects"][0]["game"]["award"] in players[0].inventario:
             print(Pasillo.pasillo)
             rooms.append(self.name)
-            return rooms
+            return rooms, players
         else: 
             print(Pasillo.pasillo_2)
             rooms.append(self.name)
-            return rooms
+            return rooms, players

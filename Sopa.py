@@ -57,6 +57,8 @@ class Sopa(Game):
                 elif not resp in self.answer:
                     print("incorrecto!!")
                     players[0].vidas -= 0.5
+                    if players[0].vidas == 0 or players[0].vidas < 0:
+                        break
             
 sopa = Sopa(cuarto = 0, juego = 0)
 
