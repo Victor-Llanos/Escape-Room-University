@@ -44,6 +44,6 @@ class Trivia(Game):
             else:
                 print("Incorrecto!!")
                 players[0].vidas -= 0.5
-                print("Vidas restante",players[0].vidas)
+                print("Vidas restante:",players[0].vidas)
 
 trivia = Trivia(cuarto = 2, juego = 1)

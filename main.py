@@ -1,4 +1,3 @@
-from Game import Game
 from Player import Player
 from Mezclada import Mezclada
 from Adivinanza import Adivinanza
@@ -11,7 +10,8 @@ from Python import Python
 from Ahorcado import Ahorcado
 from Sopa import Sopa
 from Coin_flip import Coin_flip
-from Cuarto import Cuarto
+from Memoria import Memoria
+from Mate import Mate
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
 from Plaza import Plaza
@@ -20,7 +20,7 @@ from Servidores import Servidores
 import collections
 import graphics
 
-def escapamet(rooms,players):
+def escapamet(rooms,players,player):
 
     while players[0].vidas > 0:
         
@@ -59,7 +59,8 @@ def escapamet(rooms,players):
                     trivia.game(players)
                     
                 else:
-                    pass
+                    memoria = Memoria(cuarto = 2, juego = 2)
+                    memoria.game(players)
 
         elif opc == "L":
                 
@@ -112,7 +113,8 @@ def escapamet(rooms,players):
                                         break
 
                                     elif opc == "1":
-                                        pass
+                                        coin_flip = Coin_flip(cuarto = 4, juego = 0)
+                                        coin_flip.game(players)
 
                                     elif opc == "2":
                                         mezclada = Mezclada(cuarto = 4, juego = 1)
@@ -140,17 +142,15 @@ def escapamet(rooms,players):
                 else:
                     logica_bool = Logica_bool(cuarto = 3, juego = 0)
                     logica_bool.game(players)
-                    if players[0].vidas == 0:
-                        print(graphics.muerte)
-                        exit(0)
-
+            
         elif opc == "1":
             ahorcado = Ahorcado(cuarto = 1, juego = 0)
             ahorcado.game(players)
             
             
         elif opc == "2":
-            pass
+            mate = Mate(cuarto = 1, juego = 1)
+            mate.game(players)
             
         else:
             criptograma = Criptograma(cuarto = 1, juego = 2)
@@ -162,7 +162,8 @@ def escapamet(rooms,players):
 def main():
 
     rooms = []
-    players= {}
+    players = []
+    # players_dicc = {}
 
     while True:
         print(graphics.menu)
@@ -172,8 +173,9 @@ def main():
 
         if selc == "1":
             Player.registrar_player(players)
-            print(players.vidas)
-            #escapamet(rooms,players)
+            player = {'User': players[0].user, 'Password': players[0].password, 'Age': players[0].age, "Avatar": players[0].avatar, "Dificultad": players[0].dificultad, "Vidas": players[0].vidas, "Pistas": players[0].pistas}
+            #escapamet(rooms,players,player)
+            break
 
         elif selc == "2":
             pass
@@ -227,6 +229,9 @@ def main():
     #ahorcado = Ahorcado(cuarto = 1, juego = 0)
     #ahorcado.game(players)
 
+    #mate = Mate(cuarto = 1, juego = 1)
+    #mate.game(players)
+
     #criptograma = Criptograma(cuarto = 1, juego = 2)
     #criptograma.game(players)
     
@@ -235,6 +240,9 @@ def main():
 
     #trivia = Trivia(cuarto = 2, juego = 1)
     #trivia.game(players)
+
+    #memoria = Memoria(cuarto = 2, juego = 2)
+    #memoria.game(players)
 
     #logica_bool = Logica_bool(cuarto = 3, juego = 0)
     #logica_bool.game(players)

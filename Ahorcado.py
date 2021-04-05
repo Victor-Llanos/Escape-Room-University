@@ -65,7 +65,7 @@ class Ahorcado(Game):
                     print("incorrecto!!")
                     intentos += 1
                     players[0].vidas -= 0.25
-                    print("Vidas restante",players[0].vidas)
+                    print("Vidas restante:",players[0].vidas)
                     if players[0].vidas == 0 or players[0].vidas < 0:
                         break
                     if intentos == 6:                                   #usando el contador de antes nos aseguramos que no pase 

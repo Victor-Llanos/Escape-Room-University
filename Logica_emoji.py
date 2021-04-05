@@ -66,6 +66,7 @@ class Logica_emoji(Game):
 
         else:
             print(self.message_requirement)
-            players[0].vidas -= 1                   #Caso especial del juego en que no tener los requirement hace perder vida
+            players[0].vidas -= 1
+            print("Vidas restante:",players[0].vidas)                   #Caso especial del juego en que no tener los requirement hace perder vida
 
 logica_emoji = Logica_emoji(cuarto = 2, juego = 0)

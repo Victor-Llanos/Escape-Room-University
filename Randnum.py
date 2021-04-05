@@ -46,6 +46,7 @@ class Randnum(Game):
                     if errores == 3:                                  #Cuando se llegue al 3 en el contador, se vuelve a reiniciar para seguir 
                         errores = 0                                   #el ciclo
                         players[0].vidas -= 0.25
+                        print("Vidas restante:",players[0].vidas)
                         if players[0].vidas == 0 or players[0].vidas < 0:
                             break
 
@@ -61,6 +62,7 @@ class Randnum(Game):
                         else:
                             print("pista: el numero es mayor")
                             players[0].pistas -= 1
+                            print("Pistas restante:",players[0].pistas)
 
                     else:
                         print("Chic@ valiente ¿eh?")
@@ -71,6 +73,7 @@ class Randnum(Game):
                     if errores == 3:
                         errores = 0
                         players[0].vidas -= 0.25
+                        print("Vidas restante:",players[0].vidas)
                         if players[0].vidas == 0 or players[0].vidas < 0:
                             break
 
@@ -86,6 +89,7 @@ class Randnum(Game):
                         else:
                             print("pista: el numero es mayor")
                             players[0].pistas -= 1
+                            print("Pistas restante:",players[0].pistas)
                             
                     else:
                         print("Chic@ valiente ¿eh?")

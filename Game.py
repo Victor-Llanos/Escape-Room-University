@@ -34,6 +34,7 @@ class Game:
                         print(pistas[0])
                         pistas.pop(0)
                         players[0].pistas -= 1
+                        print("Pistas restante:",players[0].pistas)
                 else:
                     print("Chic@ valiente ¿eh?\n")
                     break

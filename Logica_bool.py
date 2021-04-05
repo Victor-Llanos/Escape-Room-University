@@ -30,7 +30,7 @@ class Logica_bool(Game):
             else:
                 print("Incorrecto!!")
                 players[0].vidas -= 0.5
-                print("Vidas restante",players[0].vidas)
+                print("Vidas restante: ",players[0].vidas)
 
         elif self.award in players[0].inventario:
             print("Ya has completado este juego")

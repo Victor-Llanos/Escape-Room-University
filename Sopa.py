@@ -53,11 +53,13 @@ class Sopa(Game):
                         print("Has conseguido:",self.award)
                         players[0].inventario.append("vida_sopa")
                         players[0].vidas += 1
+                        print("Vidas restante:",players[0].vidas)
                         break
                 
                 elif not resp in self.answer:
                     print("incorrecto!!")
                     players[0].vidas -= 0.5
+                    print("Vidas restante:",players[0].vidas)
                     if players[0].vidas == 0 or players[0].vidas < 0:
                         break
             
