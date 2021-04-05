@@ -48,8 +48,9 @@ narr1 = '''
                 |                                       |
                 |   Disclaimer:                         |
                 |                                       |
-                |     sin importa tu respuestas iras    |
-                |   ____________________________________|__
+                |         Me salto tu respuesta         |
+                |           sin importar iras           |
+                |   ____________________________________|____
                 |  /                                        /
                 \_/________________________________________/
 ''' 

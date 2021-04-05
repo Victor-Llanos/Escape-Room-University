@@ -172,7 +172,7 @@ def main():
 
         if selc == "1":
             Player.registrar_player(players)
-            #escapamet(rooms,players)
+            escapamet(rooms,players)
 
         elif selc == "2":
             pass
