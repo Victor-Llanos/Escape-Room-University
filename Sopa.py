@@ -26,8 +26,8 @@ class Sopa(Game):
             words.append(self.data["answer_2"].lower())
             words.append(self.data["answer_3"].lower())
             print(words)
-            #result = create_panel(height=15, width=15, words_value_list=words)
-            #display_panel(result.get('panel'))
+            #result = create_panel(height=15, width=15, words_value_list=words) #Se crea la sopa de letra con una libreria especial
+            #display_panel(result.get('panel'))                                 #y se le pasa como palabras la lista de los nombre de la api
 
             pistas = []
             pistas.append(self.data["clue_1"])
@@ -48,8 +48,8 @@ class Sopa(Game):
                 elif resp in words and resp not in respuestas:
                     print("Correcto!!")
                     respuestas.append(resp)
-                    if len(words) == len(respuestas):
-                        print("Ganaste!!")
+                    if len(words) == len(respuestas):                  #Como en otros juego hacemos que, con la dos listas creas,
+                        print("Ganaste!!")                             #creas, no de el Ganaste!!!
                         print("Has conseguido:",self.award)
                         players[0].inventario.append("vida_sopa")
                         players[0].vidas += 1

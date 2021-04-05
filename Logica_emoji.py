@@ -8,8 +8,7 @@ api = requests.get("https://api-escapamet.vercel.app")
 class Logica_emoji(Game):
     def __init__(self,cuarto,juego):
         super().__init__(cuarto,juego)
-        #number = self.number
-        #self.question = self.juego["game"]["questions"][number]
+        self.message_requirement = self.juego["game"]["message_requirement"]
         
 
     def game(self,players):
@@ -18,20 +17,19 @@ class Logica_emoji(Game):
         if "Mensaje: Si estas gradudado puedes pisar el Samán" in players[0].inventario and "título Universitario" in players[0].inventario and not self.award in players[0].inventario: 
             number = self.number
             print(self.name,"\n")
-            #print("Reglas:",self.rules,"\n")
-
-            if number == 0:
+                                                    #random para saber cual pregunta se dara 
+            if number == 0:                             
 
                 print(self.questions[number])
 
                 while True:
                     resp = input("> ")
                     try:
-                        resp = int(resp)
+                        resp = int(resp)                        
                         break
-                    except ValueError:
+                    except ValueError:                                  
                         print("Ingrese un numero entero")                
-                if resp == 67:
+                if resp == 67:                                      #Sabiendo ambas respuestas, solo se iguala la respuesta y alli se ve si es correcta o no
 
                     print("Correcto!!")
                     print("Has conseguido:",self.award)
@@ -67,7 +65,7 @@ class Logica_emoji(Game):
             print("Ya has completado este juego")
 
         else:
-            print(api.json()[2]["objects"][0]["game"]["message_requirement"])
-            players[0].vidas -= 1
+            print(self.message_requirement)
+            players[0].vidas -= 1                   #Caso especial del juego en que no tener los requirement hace perder vida
 
 logica_emoji = Logica_emoji(cuarto = 2, juego = 0)

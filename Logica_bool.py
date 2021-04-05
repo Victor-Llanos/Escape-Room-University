@@ -14,13 +14,12 @@ class Logica_bool(Game):
         self.message_requirement = self.juego["game"]["message_requirement"]
 
     def game(self,players):
-        #martillo" in players[0].inventario and
-        if "martillo" in players[0].inventario and not "vida_bool" in players[0].inventario:
+        
+        if "martillo" in players[0].inventario and not self.award in players[0].inventario:
             
             print(self.name,"\n")
-            print("Reglas:",self.rules,"\n")
-
-            print(self.question)
+            print("Reglas:",self.rules,"\n")               #Simple juego que funciona al revisar que la repuesta
+            print(self.question)                           #deñ jugador este en la lista answer de la api
             resp = input("> ")
 
             if resp == self.answer:

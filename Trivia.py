@@ -25,9 +25,9 @@ class Trivia(Game):
             print(self.question,":")
             print("A.",self.answer["correct_answer"])
             print("B.",self.answer["answer_2"])
-            print("C.",self.answer["answer_3"])
-            print("D.",self.answer["answer_4"])
-
+            print("C.",self.answer["answer_3"])            #Solo se hace un print de las 4 preguntas 
+            print("D.",self.answer["answer_4"])            #Funfact todas las repuestas correctas 
+                                                           #estan el posicion 1 letra A 
             pistas = []
             pistas.append(self.clue["clue_1"])
             Game.pistas(players,pistas) 

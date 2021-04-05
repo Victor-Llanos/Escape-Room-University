@@ -23,29 +23,29 @@ class Ahorcado(Game):
             print("Reglas:",self.rules,"\n")
             print("Si te equivocas 6 veces Ahorcado\n")
             print(self.question,"\n")
-            respuestas = []
-            answer = set(self.answer.lower())
+            respuestas = []                     #lista para guardar la letras de usuario y usarla para validaciones
+            answer = set(self.answer.lower())   #se para la palabra por letra y la pasamos a miniscula para mas facilitar el juego 
 
             pistas = []
             pistas.append(self.clue["clue_1"])
             pistas.append(self.clue["clue_2"])
             pistas.append(self.clue["clue_3"])
             Game.pistas(players,pistas)
-            intentos = 0
-            
+            intentos = 0                    #contador para saber los intendo y ver si se ahorca por max 
+                                            #intentos alcanzados
             while True:
         
                 for i in self.answer.lower():
                     
-                    if i in respuestas:
-                        print(i,end="")
-            
+                    if i in respuestas:     #Se usa un end para que print sea horizontal
+                        print(i,end="")     #la palabra se cambia por emoji y si encuentra la letra
+                                            #procede a reemplazar el emoji/s por la/s letra/s
                     else:
                         print("🥵",end=" ")
 
                 resp = input("\nIngrese una letra: ")
 
-                if len(resp) > 1 or len(resp) < 1:
+                if len(resp) > 1 or len(resp) < 1:     
                     print("Ingrese letra por letra")
                 
                 elif resp in respuestas:
@@ -68,8 +68,8 @@ class Ahorcado(Game):
                     print("Vidas restante",players[0].vidas)
                     if players[0].vidas == 0 or players[0].vidas < 0:
                         break
-                    if intentos == 6:
-                        print("ahorcado")
+                    if intentos == 6:                                   #usando el contador de antes nos aseguramos que no pase 
+                        print("ahorcado")                               #de 6 intentos
                         break
 
                 else:

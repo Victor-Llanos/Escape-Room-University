@@ -1,5 +1,8 @@
+#Archivo cuya funcion es almacenar graficos ASCII de todo lo que no sea juegos (exceptuando al boss) y salas
+
+
 menu = '''
-             ____  _                           _     _                
+             ____  _                           _     _                      
             |  _ \(_)                         (_)   | |               
             | |_) |_  ___ _ ____   _____ _ __  _  __| | ___     __ _  
             |  _ <| |/ _ | '_ \ \ / / _ | '_ \| |/ _` |/ _ \   / _` | 
@@ -17,16 +20,18 @@ menu = '''
               +---------------------+-----------------------------+
               | 1.Registrar usuario | 2.Usar usuario ya existente |
               +---------------------+-----------------------------+
-              | 3.Ver records       | 3.Ver Instrucciones         |
+              | 3.Ver records       | 4.Ver Instrucciones         |
               +---------------------+-----------------------------+
+              | 5.Salir             | 6.Palabras del creador      |
+              +---------------------+-----------------------------+              
                                                         
 ''' 
 
-narr = '''
+narr1 = '''
              __________________________________________
-            / \                                        \
+            /  \.                                       \.
             ||| |                                       |
-             \_ | Hoy 5 de marzo de 2021,la Universidad |
+            \__-| Hoy 5 de marzo de 2021,la Universidad |
                 | sigue en cuarentena (esto no es       |
                 | novedad) lo que sí es novedad es que  |
                 | se robaron un Disco Duro de la        |
@@ -41,6 +46,9 @@ narr = '''
                 |                                       |
                 |           ¿Aceptas el reto?           |
                 |                                       |
+                |   Disclaimer:                         |
+                |                                       |
+                |     sin importa tu respuestas iras    |
                 |   ____________________________________|__
                 |  /                                        /
                 \_/________________________________________/

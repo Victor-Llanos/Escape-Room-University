@@ -167,12 +167,11 @@ def main():
     while True:
         print(graphics.menu)
         selc = input("> ")
-        
+        while selc != "1" and selc != "2" and selc != "3" and selc != "4" and selc != "5" and selc != "6":
+            selc = input("Ingreso invalido, intente de nuevo: ")
+
         if selc == "1":
             Player.registrar_player(players)
-            object_dict = dict(map(lambda x: [x.id, x], list))
-            print(object_dict)
-
             #escapamet(rooms,players)
 
         elif selc == "2":
@@ -181,6 +180,12 @@ def main():
         elif selc == "3":
             pass
         
+        elif selc == "4":
+            pass
+
+        elif selc == "5":
+            break
+
         else:
             pass
 

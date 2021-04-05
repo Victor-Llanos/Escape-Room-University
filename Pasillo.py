@@ -3,7 +3,7 @@ from Cuarto import Cuarto
 api = requests.get("https://api-escapamet.vercel.app")
 
 class Pasillo(Cuarto):
-    def __init__(self,cuarto):
+    def __init__(self,cuarto):               #Caso unico de los cuartos que hay un cambio visual cuando se completa el juego
         super().__init__(cuarto)
 
     pasillo = '''
@@ -72,8 +72,8 @@ class Pasillo(Cuarto):
         if not api.json()[3]["objects"][0]["game"]["award"] in players[0].inventario:
             print(Pasillo.pasillo)
             rooms.append(self.name)
-            return rooms, players
-        else: 
+            return rooms, players           #Dado a lo comentado arriba se valida si tiene o no el award de esa sala
+        else:                               #para saber que grafica hacer print
             print(Pasillo.pasillo_2)
             rooms.append(self.name)
             return rooms, players

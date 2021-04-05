@@ -25,7 +25,7 @@ class Criptograma(Game):
             if self.desplazamiento == 2:
                 des2 = frase.maketrans("abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZáéíóúÁÉÍÓÚ", "cdefghijklmnñopqrstuvwxyzabCDEFGHIJKLMNÑOPQRSTUVWXYZABcgkqwCGKQW")
                 frase = frase.translate(des2)
-                print(frase)
+                print(frase)                         #se usa maketrans y translate para cambiar deñ abecedario al abecedario cifrado dependiend del desplazamiento
                 print('''
                     +-------------------+-------------------+
                     | c d e f g h i j k | a b c d e f g h i |
@@ -59,8 +59,8 @@ class Criptograma(Game):
                 ''')
 
             new_frase = self.question
-            a,b =  'áéíóúüÁÉÍÓÚÜ','aeiouuAEIOUU'
-            trans = str.maketrans(a,b)
+            a,b =  'áéíóúüÁÉÍÓÚÜ','aeiouuAEIOUU'        #ya que al cambiar el cifrado de la oracion no hay forma de saber si algunas letras llevan acento
+            trans = str.maketrans(a,b)                  #se vuelve a usar maketrans y translate para convertir cualquier oracion a una oracion sin acentos
             new_frase.translate(trans)
 
             resp = input("> ")

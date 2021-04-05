@@ -4,11 +4,11 @@ api = requests.get("https://api-escapamet.vercel.app")
 
 class Biblioteca(Cuarto):
     def __init__(self,cuarto):
-        super().__init__(cuarto)
+        super().__init__(cuarto)        #Se estableze el dibujo de la sala para luego llamarlo al main
 
     biblio = '''
          ---------------------------------------------------------------------------
-        |   |                                                                   |   |
+        |   |                                                                   |   |       
         | /||                     ______________________________                ||\ | 
         || ||                    |                              |      ____     || ||
         || ||                    |       0                      |     |\____\   || ||
@@ -31,5 +31,5 @@ class Biblioteca(Cuarto):
     ''' 
     def room(self,rooms):
         print(Biblioteca.biblio)
-        rooms.append(self.name)
-        return rooms
+        rooms.append(self.name)     #se apendea a una lista al main 
+        return rooms                #para contar la sala mas visita

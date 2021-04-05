@@ -31,9 +31,9 @@ class Python(Game):
                 resp = input("> ")
                 frase = "oidutse ne al ortem aireinegni ed sametsis"
 
-                if "frase" in resp:  
-                    new_frase = frase[::-1]
-
+                if "frase" in resp:                     #Evaluo en ambas preguntas la correcta forma de llegar a la respuesta
+                    new_frase = frase[::-1]             #para luego usar eval() para evaluar el input de jugador y se igualan 
+                                                        #ambas para dar con su respuesta
                     if eval(resp) == new_frase:
     
                         print("Correcto!!")

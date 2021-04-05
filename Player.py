@@ -1,3 +1,5 @@
+import graphics
+
 class Player:
     def __init__(self, user, password, age, avatar, dificultad, vidas, pistas, inventario):
         self.user = user
@@ -15,8 +17,8 @@ class Player:
     def registrar_player(players):
 
         user = input("Ingrese su username: ")
-        while (len(user) < 6) or (len(user) > 12):
-            user = input("El username tiene que ser de entre 6 a 12 caracteres: ")  
+        while (len(user) < 6) or (len(user) > 12):                                   #Se usa un metedo que luego retornara todos
+            user = input("El username tiene que ser de entre 6 a 12 caracteres: ")   #los datos del usuario en la lista de main
 
         #if user in .txt:
         #   confirmacion = print("Username ya en uso, ingrese otro username") 
@@ -35,11 +37,12 @@ class Player:
             except ValueError:
                 print("Ingrese un numero entero: ")
 
-        inventario = ["Ganas de vivir"]
-            
-        avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"]
-        for i, avatar in enumerate(avatares, 1):
-            print(i, avatar)
+        inventario = ["Ganas de vivir"] #Al empezar el juego tienes en tu invetario "ganas de vivir" que me sirve                                           
+                                        #me sirve como recuerdo para decirme que si puedo con este proyecto... creo
+
+        avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"] #Ademas de los avatares dados por el doc, se agrega a camaron
+        for i, avatar in enumerate(avatares, 1):                                    #inspirado en el constate recuerdo que me siento mal en la silla
+            print(i, avatar)                                                        #teniendo la postura camaron
 
         while True:
             opc = input("Ingrese el numero correspondiente al avatar: ")
@@ -58,13 +61,14 @@ class Player:
         
 
         if dificultad == "1":
-            print("Nuevo? o es que tienes miedo?\n")
-            dificultad = "Facil"
-            vidas = 5.0
+            print("Nuevo? o es que tienes miedo?\n")                                #dependiendo de la dificultad seleccion se le dara un numero de vidas y pistas 
+            dificultad = "Facil"                                   
+            vidas = 5.0                                                                  
             pistas = 5
             player = Player(user,password,age,avatar,dificultad,vidas,pistas,inventario)
             players.append(player)
             player.mostrar()
+            print(graphics.narr1)
             return players
 
         elif dificultad == "2":
@@ -75,6 +79,7 @@ class Player:
             player = Player(user,password,age,avatar,dificultad,vidas,pistas, inventario)
             players.append(player)
             player.mostrar()
+            print(graphics.narr1)
             return players
 
         else:
@@ -85,4 +90,8 @@ class Player:
             player = Player(user,password,age,avatar,dificultad,vidas,pistas, inventario)
             players.append(player)
             player.mostrar()
+            print(graphics.narr1)
             return players
+
+        
+        

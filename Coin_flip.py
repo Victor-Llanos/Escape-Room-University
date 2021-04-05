@@ -14,17 +14,15 @@ class Coin_flip(Game):
 
     def game(self,players):
         
-        #if "carnet" in players[0].inventario and "Disco Duro" in players[0].inventario
-        a = 1
-        if a == 1:
+        if "carnet" in players[0].inventario and "Disco Duro" in players[0].inventario:
             
             print("Final Boss\n")
             print("Reglas:",self.rules,"\n")
 
-            print(graphics.boss)
-            b = input("Press any key: ")
-
-            print(graphics.boss2)
+            print(graphics.boss)                  #a manera que ayude la narrativa el boss va
+            b = input("Press any key: ")          #haciendo su monologo que fue indiscretamente
+                                                  #tomado del personaje sans del juego undertale
+            print(graphics.boss2)                 #esto porque me hace feliz y no creo que no afecta a la narrativa
             b = input("Press any key: ")
 
             print(graphics.boss3)
@@ -44,9 +42,8 @@ class Coin_flip(Game):
             coin = random.choice(["Cara","Sello"])
             print(coin)
 
-
-            if coin == "Cara":
-                print(graphics.cara,"\n")
+            if coin == "Cara":                    #Se asegura de saber si en random es cara o sello 
+                print(graphics.cara,"\n")         #de alli se ve si erro o acerto y se hcae print de la moneda
                 if user_guest == coin:
                     print("ganaste")
                 else:

@@ -16,7 +16,7 @@ class Randnum(Game):
         if self.award in players[0].inventario:
             print("Ya has completado este juego")
 
-        else:
+        else:                                        #Se crea un contador para saber cuando llegue a 3 quitarle la vida correspondiente
 
             errores = 0
 
@@ -43,8 +43,8 @@ class Randnum(Game):
                 elif resp < ans:
                     print("Incorrecto!!")
                     errores += 1
-                    if errores == 3:
-                        errores = 0
+                    if errores == 3:                                  #Cuando se llegue al 3 en el contador, se vuelve a reiniciar para seguir 
+                        errores = 0                                   #el ciclo
                         players[0].vidas -= 0.25
                         if players[0].vidas == 0 or players[0].vidas < 0:
                             break
