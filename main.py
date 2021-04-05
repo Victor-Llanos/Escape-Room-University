@@ -161,7 +161,7 @@ def escapamet(rooms,players):
 
 def main():
 
-    rooms = []
+    rooms = {}
     players = {}
 
     while True:
