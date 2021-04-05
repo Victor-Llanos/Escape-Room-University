@@ -21,6 +21,7 @@ class Ahorcado(Game):
         else:
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
+            print("Si te equivocas 6 veces Ahorcado\n")
             print(self.question,"\n")
             respuestas = []
             answer = set(self.answer.lower())
@@ -30,6 +31,7 @@ class Ahorcado(Game):
             pistas.append(self.clue["clue_2"])
             pistas.append(self.clue["clue_3"])
             Game.pistas(players,pistas)
+            intentos = 0
             
             while True:
         
@@ -61,9 +63,13 @@ class Ahorcado(Game):
 
                 elif not resp in self.answer.lower():
                     print("incorrecto!!")
+                    intentos += 1
                     players[0].vidas -= 0.25
                     print("Vidas restante",players[0].vidas)
                     if players[0].vidas == 0 or players[0].vidas < 0:
+                        break
+                    if intentos == 6:
+                        print("ahorcado")
                         break
 
                 else:

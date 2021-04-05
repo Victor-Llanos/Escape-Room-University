@@ -10,6 +10,7 @@ from Randnum import Randnum
 from Python import Python
 from Ahorcado import Ahorcado
 from Sopa import Sopa
+from Coin_flip import Coin_flip
 from Cuarto import Cuarto
 from Laboratorio_SL001 import Laboratorio_SL001
 from Biblioteca import Biblioteca
@@ -169,7 +170,10 @@ def main():
         
         if selc == "1":
             Player.registrar_player(players)
-            escapamet(rooms,players)
+            object_dict = dict(map(lambda x: [x.id, x], list))
+            print(object_dict)
+
+            #escapamet(rooms,players)
 
         elif selc == "2":
             pass
@@ -182,11 +186,6 @@ def main():
 
     #cuenta1 = collections.Counter(rooms)
  
-
-    #while True:
-    #    if players[0].vidas > 0:
-    #        Start_game.escapamet(rooms,players)
-
 
     #CUARTOS
 
@@ -233,6 +232,9 @@ def main():
 
     #logica_bool = Logica_bool(cuarto = 3, juego = 0)
     #logica_bool.game(players)
+
+    #coin_flip = Coin_flip(cuarto = 4, juego = 0)
+    #coin_flip.game(players)
 
     #mezclada = Mezclada(cuarto = 4, juego = 1)
     #mezclada.game(players)

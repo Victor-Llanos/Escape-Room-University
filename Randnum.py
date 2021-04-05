@@ -17,7 +17,9 @@ class Randnum(Game):
             print("Ya has completado este juego")
 
         else:
-        
+
+            errores = 0
+
             ans = random.randint(1,15)
             print(self.name)
             print("Reglas:",self.rules,"\n")
@@ -25,7 +27,7 @@ class Randnum(Game):
             while True:
                 print(self.question,"\n")
                 while True:
-                    resp = input("> ")
+                    resp = int(input("> "))
                     try:
                         resp = int(resp)
                         break
@@ -40,23 +42,51 @@ class Randnum(Game):
 
                 elif resp < ans:
                     print("Incorrecto!!")
+                    errores += 1
+                    if errores == 3:
+                        errores = 0
+                        players[0].vidas -= 0.25
+                        if players[0].vidas == 0 or players[0].vidas < 0:
+                            break
+
                     opc = input("¿Quieres una pista? Y/N: ").upper()
                     while opc != "Y" and opc != "N":
                         opc = input("Ingrese un valor valido: ")
 
                     if opc == "Y":
-                        print("pista: el numero es mayor")
+
+                        if players[0].pistas == 0:
+                            print("Se te acabaron tus oportunidades de pistas\n")
+
+                        else:
+                            print("pista: el numero es mayor")
+                            players[0].pistas -= 1
+
                     else:
                         print("Chic@ valiente ¿eh?")
 
-                elif resp > ans:
+                else:
                     print("Incorrecto!!")
+                    errores += 1
+                    if errores == 3:
+                        errores = 0
+                        players[0].vidas -= 0.25
+                        if players[0].vidas == 0 or players[0].vidas < 0:
+                            break
+
                     opc = input("¿Quieres una pista? Y/N: ").upper()
                     while opc != "Y" and opc != "N":
                         opc = input("Ingrese un valor valido: ")
 
                     if opc == "Y":
-                        print("pista: el numero es menor")
+
+                        if players[0].pistas == 0:
+                            print("Se te acabaron tus oportunidades de pistas\n")
+
+                        else:
+                            print("pista: el numero es mayor")
+                            players[0].pistas -= 1
+                            
                     else:
                         print("Chic@ valiente ¿eh?")
 

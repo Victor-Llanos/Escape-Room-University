@@ -14,7 +14,7 @@ class Sopa(Game):
 
     def game(self,players):
 
-        if self.award in players[0].inventario:
+        if "vida_sopa" in players[0].inventario:
             print("Ya has completado este juego")
         
         else:
@@ -51,7 +51,8 @@ class Sopa(Game):
                     if len(words) == len(respuestas):
                         print("Ganaste!!")
                         print("Has conseguido:",self.award)
-                        players[0].inventario.append(self.award)
+                        players[0].inventario.append("vida_sopa")
+                        players[0].vidas += 1
                         break
                 
                 elif not resp in self.answer:
