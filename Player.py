@@ -40,9 +40,9 @@ class Player:
         inventario = ["Ganas de vivir"] #Al empezar el juego tienes en tu invetario "ganas de vivir" que me sirve                                           
                                         #me sirve como recuerdo para decirme que si puedo con este proyecto... creo
 
-        avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"] #Ademas de los avatares dados por el doc, se agrega a camaron
-        for i, avatar in enumerate(avatares, 1):                                    #inspirado en el constate recuerdo que me siento mal en la silla
-            print(i, avatar)                                                        #teniendo la postura camaron
+        avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"]     #Ademas de los avatares dados por el doc, se agrega a camaron
+        for i, avatar in enumerate(avatares, 1):                                        #inspirado en el constate recuerdo que me siento mal en la silla
+            print(i, avatar)                                                            #teniendo la postura camaron
 
         while True:
             opc = input("Ingrese el numero correspondiente al avatar: ")
@@ -61,7 +61,7 @@ class Player:
         
 
         if dificultad == "1":
-            print("Nuevo? o es que tienes miedo?\n")                                #dependiendo de la dificultad seleccion se le dara un numero de vidas y pistas 
+            print("Nuevo? o es que tienes miedo?\n")            #dependiendo de la dificultad seleccion se le dara un numero de vidas y pistas 
             dificultad = "Facil"                                   
             vidas = 5.0                                                                  
             pistas = 5
