@@ -19,6 +19,7 @@ from Pasillo import Pasillo
 from Servidores import Servidores
 import collections
 import graphics
+import json
 
 def escapamet(rooms,players,player):
 
@@ -163,7 +164,8 @@ def main():
 
     rooms = []
     players = []
-    # players_dicc = {}
+    players_dicc = {}
+    players_dicc["Player"] = []
 
     while True:
         print(graphics.menu)
@@ -173,9 +175,16 @@ def main():
 
         if selc == "1":
             Player.registrar_player(players)
+
             player = {'User': players[0].user, 'Password': players[0].password, 'Age': players[0].age, "Avatar": players[0].avatar, "Dificultad": players[0].dificultad, "Vidas": players[0].vidas, "Pistas": players[0].pistas}
-            #escapamet(rooms,players,player)
-            break
+
+            players_dicc["Player"].append(player)
+            
+            with open("Players.json","w") as file:
+                file.write(json.dumps(players_dicc))
+
+            escapamet(rooms,players,player)
+            del players[0]
 
         elif selc == "2":
             pass
