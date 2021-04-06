@@ -70,7 +70,6 @@ class Pasillo(Cuarto):
 
     def room(self,rooms,players):
         if not api.json()[3]["objects"][0]["game"]["award"] in players[0].inventario:
-            Cuarto.name_cuarto()
             print(Pasillo.pasillo)
             rooms.append(self.name)
             return rooms, players           #Dado a lo comentado arriba se valida si tiene o no el award de esa sala
