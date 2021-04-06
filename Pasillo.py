@@ -74,7 +74,7 @@ class Pasillo(Cuarto):
             rooms.append(self.name)
             return rooms, players           #Dado a lo comentado arriba se valida si tiene o no el award de esa sala
         else:
-                     #para saber que grafica hacer print
+            #para saber que grafica hacer print
             print(Pasillo.pasillo_2)
             rooms.append(self.name)
             return rooms, players
