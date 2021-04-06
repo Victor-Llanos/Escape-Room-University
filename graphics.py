@@ -53,30 +53,78 @@ narr1 = '''
                 \_/________________________________________/
 ''' 
 
-narr2 = '''
+palabras = '''
              __________________________________________
             /  \.                                       \.
             ||| |                                       |
-            \__-| Hoy 5 de marzo de 2021,la Universidad |
-                | sigue en cuarentena (esto no es       |
-                | novedad) lo que sí es novedad es que  |
-                | se robaron un Disco Duro de la        |
-                | Universidad del cuarto de redes que   |
-                | tiene toda la información de SAP de   |
-                | estudiantes, pagos y  asignaturas.    |
-                | Necesitamos que nos ayudes a recuperar|
-                | el disco, antes de que el servidor se |
-                | se caiga y no se pueda hacer más      |
+            \__-| Heyhey aqui Victor aka el que intento |
+                | programar esto, solo tomo este espacio|
+                | para decir que si bien el juego le    |
+                | faltan ciertas cosas (jaja spolier),  |
+                | aun asi todo lo que vas a probar o    |
+                | probaste se intento lo mejor (mas o   |
+                | menos) asi que te pseudo programador a|
+                | jugador, te pido que disfrutes el     |
+                | juego o al menos lo intentes, Ah! y se|
+                |  me olvidaba si en la verificacion de |
+                | de robot en el registro colocas       |
+                | "algoritmos" desbloquearas a mis      |
+                | profesores y preparadores de esta     |
+                | materia como avatares jugables.       |
                 |                                       |
-                |           ¿Aceptas el reto?           |
                 |                                       |
-                |   Disclaimer:                         |
-                |                                       |
-                |         Me salto tu respuesta         |
-                |           sin importar iras           |
+                |  -Univ3rg                             |
                 |   ____________________________________|____
                 |  /                                        /
                 \_/________________________________________/
+
+''' 
+
+Instrucciones = '''
+             __________________________________________
+            /  \.                                       \.
+            ||| |                                       |
+            \__-| Buenas! y bienvenido a escapete.      |
+                | aqui un pequeño tuto de lo que hacer  |
+                | si eres nuevo ve a registrar y elige  |
+                | tanto un nombre cool, luego seguiran  |
+                | datos aburridos elige avatar y        |
+                | dificultad, ya estas listo para jugar.|
+                |                                       |
+                | De alli en adelante es muy intuitivo  |
+                | juega mini juegos y desbloquea items  |
+                | para seguir adelante, cada juego te   |
+                | dira como jugar asi que tranquilo.    |
+                |                                       |
+                | Asi nada mas te deseo suerte y que    |
+                | disfrites el juego. Adew              |
+                |                                       |
+                |                                       |
+                |   ____________________________________|____
+                |  /                                        /
+                \_/________________________________________/
+''' 
+
+mate = '''
+  _   _         _                            _              _                           _               
+ | \ | |       (_)                          | |            (_)                         | |              
+ |  \| | ___    _ _ __ ___  _ __   ___  _ __| |_ __ _   ___ _   _ __   ___    ___  __ _| |__   ___ ___  
+ | . ` |/ _ \  | | '_ ` _ \| '_ \ / _ \| '__| __/ _` | / __| | | '_ \ / _ \  / __|/ _` | '_ \ / _ / __| 
+ | |\  | (_) | | | | | | | | |_) | (_) | |  | || (_| | \__ | | | | | | (_) | \__ | (_| | |_) |  __\__ \ 
+ |_| \_|\___/  |_|_| |_| |_| .__/ \___/|_|   \__\__,_| |___|_| |_| |_|\___/  |___/\__,_|_.__/ \___|___/ 
+              _           _| |                                                                          
+             | |         (_)_|                                                                          
+           __| | ___ _ __ ___   ____ _ _ __   _ __   ___  _ __ __ _ _   _  ___   _   _  ___             
+          / _` |/ _ | '__| \ \ / / _` | '__| | '_ \ / _ \| '__/ _` | | | |/ _ \ | | | |/ _ \            
+         | (_| |  __| |  | |\ V | (_| | |    | |_) | (_) | | | (_| | |_| |  __/ | |_| | (_) |           
+          \__,_|\___|_|  |_| \_/ \__,_|_|    | .__/ \___/|_|  \__, |\__,_|\___|  \__, |\___/            
+                                             | |                 | |              __/ |                 
+             _ __   ___    ___  ___   _ __  _|_| ___   __ _ _ __ |_|_ _ __ ___   |___/_ __              
+            | '_ \ / _ \  / __|/ _ \ | '_ \| '__/ _ \ / _` | '__/ _` | '_ ` _ \ / _` | '__|             
+            | | | | (_) | \__ |  __/ | |_) | | | (_) | (_| | | | (_| | | | | | | (_| | |                
+            |_| |_|\___/  |___/\___| | .__/|_|  \___/ \__, |_|  \__,_|_| |_| |_|\__,_|_|                
+                                     | |               __/ |                                            
+                                     |_|              |___/                                             
 ''' 
 
 muerte = '''

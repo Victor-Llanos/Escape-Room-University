@@ -21,12 +21,32 @@ import collections
 import graphics
 import time 
 
-def registrar_player(players):
+def get_avatar(avatares):
+    avatares.append("Luis")
+    avatares.append("Isabel")
+    avatares.append("Rommel")
+    avatares.append("Alejandro")
+    avatares.append("Jorge")
+    return avatares
+
+def registrar_player(players,):
+
+    avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"]
+    #Ademas de los avatares dados por el doc, se agrega a camaron
+    #inspirado en el constate recuerdo que me siento mal en la silla
+    #teniendo la postura camaron  
+    a = input("Presiona cualquier tecla saber que no eres un robot: ")
+
+    if a == "algoritmos":
+        get_avatar(avatares)
+    else:
+        pass
 
     user = input("Ingrese su username: ")
-    while (len(user) < 6) or (len(user) > 12):                        
-        user = input("El username tiene que ser de entre 6 a 12 caracteres: ")  
-        
+    while (len(user) < 6) or (len(user) > 16):                        
+        user = input("El username tiene que ser de entre 6 a 16 caracteres: ")
+
+   
     with open("Database_Players.txt") as dbe:
         datos = dbe.readlines()
 
@@ -57,10 +77,7 @@ def registrar_player(players):
     #Al empezar el juego tienes en tu invetario "ganas de vivir" que me sirve                          
     #me sirve como recuerdo para decirme que si puedo con este proyecto... creo
 
-    avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"]     
-    #Ademas de los avatares dados por el doc, se agrega a camaron
-    #inspirado en el constate recuerdo que me siento mal en la silla
-    #teniendo la postura camaron
+
     for i, avatar in enumerate(avatares, 1):                                        
         print(i, avatar)                                                 
 
@@ -125,10 +142,7 @@ def escapamet(rooms,players):
         
         biblio = Biblioteca(cuarto = 1) 
         biblio.room(rooms)
-        print(rooms)
         cuenta1 = collections.Counter(rooms)
-        print(cuenta1)
-            
         opc = input("> ").upper()
         while opc != "R" and opc != "L" and opc != "1" and opc != "2" and opc != "3":
             opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -139,9 +153,7 @@ def escapamet(rooms,players):
 
                 plaza= Plaza(cuarto = 2) 
                 plaza.room(rooms)
-                print(rooms)
                 cuenta1 = collections.Counter(rooms)
-                print(cuenta1)
                 opc = input("> ").upper()
                 while opc != "L" and opc != "1" and opc != "2" and opc != "3":
                     opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -167,9 +179,7 @@ def escapamet(rooms,players):
                 
                 pasillo = Pasillo(cuarto = 3) 
                 pasillo.room(rooms,players)
-                print(rooms)
                 cuenta1 = collections.Counter(rooms)
-                print(cuenta1)
                 opc = input("> ").upper()
                 while opc != "R" and opc != "L" and opc != "1":
                     opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -185,9 +195,7 @@ def escapamet(rooms,players):
 
                             laboratorio = Laboratorio_SL001(cuarto = 0) 
                             laboratorio.room(rooms)
-                            print(rooms)
                             cuenta1 = collections.Counter(rooms)
-                            print(cuenta1)
                             opc = input("> ").upper()
                             while opc != "R" and opc != "L" and opc != "1" and opc != "2" and opc != "3":
                                 opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -201,9 +209,7 @@ def escapamet(rooms,players):
 
                                     servidores= Servidores(cuarto = 4) 
                                     servidores.room(rooms)
-                                    print(rooms)
                                     cuenta1 = collections.Counter(rooms)
-                                    print(cuenta1)
                                     opc = input("> ").upper()
                                     while opc != "R" and opc != "1" and opc != "2" and opc != "3":
                                         opc = input("Ingreso invalido, intente de nuevo: ").upper()
@@ -266,9 +272,6 @@ def main():
     rooms = []
     players = []
     
-    time_limit = 5
-    start_time = time.time()
-
     while True:
         print(graphics.menu)
         selc = input("> ")
@@ -281,19 +284,22 @@ def main():
             del players[0]
      
         elif selc == "2":
-            pass
+            print("Lo intente y bueno... no lo logre, aun asi tu usuario se queda guardado")
+            a = input("presiona una tecla para salir: ")
         
         elif selc == "3":
             pass
         
         elif selc == "4":
-            pass
+            print(graphics.Instrucciones)
+            a = input("presiona una tecla para salir: ")
 
         elif selc == "5":
             break
 
         else:
-            pass
+            print(graphics.palabras)
+            a = input("presiona una tecla para salir: ")
 
     #cuenta1 = collections.Counter(rooms)
  

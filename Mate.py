@@ -1,6 +1,6 @@
 from Game import Game
-from Player import Player
 import requests
+import graphics
 
 api = requests.get("https://api-escapamet.vercel.app")
 
@@ -15,6 +15,8 @@ class Mate(Game):
             
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
+
+            print(graphics.mate)
 
             print("Nota del programador: Rommel... lo siento, no logre programar este juego \n pero para que el juego pueda continuar\n")
             print("Has conseguido:",self.award)

@@ -19,26 +19,29 @@ class Coin_flip(Game):
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
 
-            print(graphics.boss)                  #a manera que ayude la narrativa el boss va
-            b = input("Press any key: ")          #haciendo su monologo que fue indiscretamente
-                                                  #tomado del personaje sans del juego undertale
-            print(graphics.boss2)                 #esto porque me hace feliz y no creo que no afecta a la narrativa
-            b = input("Press any key: ")
+            print(graphics.boss)                 
+            b = input("Presiona una tecla para continuar: ")
+            #a manera que ayude la narrativa el boss va
+            #haciendo su monologo que fue indiscretamente          
+            #tomado del personaje sans del juego undertale  
+            #esto porque me hace feliz y no creo que no afecta a la narrativa                                     
+            print(graphics.boss2)                 
+            b = input("Presiona una tecla para continuar: ")
 
             print(graphics.boss3)
-            b = input("Press any key: ")
+            b = input("Presiona una tecla para continuar: ")
 
             print(graphics.boss4)
-            b = input("Press any key: ")
+            b = input("Presiona una tecla para continuar: ")
 
             print(graphics.boss5)
-            b = input("Press any key: ")
+            b = input("Presiona una tecla para continuar: ")
 
             print(graphics.boss6)
-            b = input("Press any key: ")
+            b = input("Presiona una tecla para continuar: ")
 
             print(graphics.boss7)
-            b = input("Press any key: ")
+            b = input("Presiona una tecla para continuar: ")
 
             while True:
                 user_guest = input("Elije Cara o Sello: ").capitalize()
@@ -73,5 +76,5 @@ class Coin_flip(Game):
                         if players[0].vidas == 0 or players[0].vidas < 0:
                             break
 
-        #else:
-            #print(self.message_requirement)
+        else:
+            print(self.message_requirement)
