@@ -32,6 +32,7 @@ class Laboratorio_SL001(Cuarto):
     ''' 
 
     def room(self,rooms):
+        Cuarto.name_cuarto()
         print(Laboratorio_SL001.lab)
         rooms.append(self.name)
         return rooms

@@ -38,6 +38,7 @@ class Servidores(Cuarto):
                 
     ''' 
     def room(self,rooms):
+        Cuarto.name_cuarto()
         print(Servidores.servidores)
         rooms.append(self.name)
         return rooms

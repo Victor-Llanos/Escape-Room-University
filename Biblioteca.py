@@ -30,6 +30,7 @@ class Biblioteca(Cuarto):
         Inserta L para ir a Pasillo Laboratorios
     ''' 
     def room(self,rooms):
+        Cuarto.name_cuarto()        
         print(Biblioteca.biblio)
         rooms.append(self.name)     #se apendea a una lista al main 
         return rooms                #para contar la sala mas visita
