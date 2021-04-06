@@ -24,7 +24,6 @@ class Sopa(Game):
             words.append(self.data["answer_1"].lower())
             words.append(self.data["answer_2"].lower())
             words.append(self.data["answer_3"].lower())
-            print(words)
             result = create_panel(height=15, width=15, words_value_list=words) 
             display_panel(result.get('panel'))     
             #Se crea la sopa de letra con una libreria especial

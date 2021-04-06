@@ -23,6 +23,7 @@ class Randnum(Game):
             ans = random.randint(1,15)
             print(self.name)
             print("Reglas:",self.rules,"\n")
+            print(ans)
 
             while True:
                 print(self.question,"\n")
@@ -60,14 +61,14 @@ class Randnum(Game):
                             print("Se te acabaron tus oportunidades de pistas\n")
 
                         else:
-                            print("pista: el numero es mayor")
+                            print("pista: el numero es menor")
                             players[0].pistas -= 1
                             print("Pistas restante:",players[0].pistas)
 
                     else:
                         print("Chic@ valiente ¿eh?")
 
-                else:
+                elif resp > ans:
                     print("Incorrecto!!")
                     errores += 1
                     if errores == 3:

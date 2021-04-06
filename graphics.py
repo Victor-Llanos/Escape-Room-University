@@ -84,10 +84,10 @@ Instrucciones = '''
              __________________________________________
             /  \.                                       \.
             ||| |                                       |
-            \__-| Buenas! y bienvenido a escapete.      |
+            \__-| Buenas! y bienvenido a escapemet.     |
                 | aqui un pequeño tuto de lo que hacer  |
                 | si eres nuevo ve a registrar y elige  |
-                | tanto un nombre cool, luego seguiran  |
+                | unn nombre cool, luego seguiran       |
                 | datos aburridos elige avatar y        |
                 | dificultad, ya estas listo para jugar.|
                 |                                       |
@@ -97,7 +97,7 @@ Instrucciones = '''
                 | dira como jugar asi que tranquilo.    |
                 |                                       |
                 | Asi nada mas te deseo suerte y que    |
-                | disfrites el juego. Adew              |
+                | disfrutes el juego. Adew              |
                 |                                       |
                 |                                       |
                 |   ____________________________________|____
