@@ -16,7 +16,7 @@ class Randnum(Game):
         if self.award in players[0].inventario:
             print("Ya has completado este juego")
 
-        else:                                        #Se crea un contador para saber cuando llegue a 3 quitarle la vida correspondiente
+        else:    #Se crea un contador para saber cuando llegue a 3 quitarle la vida correspondiente
 
             errores = 0
 

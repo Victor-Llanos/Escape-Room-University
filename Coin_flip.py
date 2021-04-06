@@ -14,7 +14,7 @@ class Coin_flip(Game):
 
     def game(self,players):
         
-        #if "carnet" in players[0].inventario and "Disco Duro" in players[0].inventario:
+        if "carnet" in players[0].inventario and "Disco Duro" in players[0].inventario:
             
             print(self.name,"\n")
             print("Reglas:",self.rules,"\n")
@@ -34,6 +34,12 @@ class Coin_flip(Game):
             print(graphics.boss5)
             b = input("Press any key: ")
 
+            print(graphics.boss6)
+            b = input("Press any key: ")
+
+            print(graphics.boss7)
+            b = input("Press any key: ")
+
             while True:
                 user_guest = input("Elije Cara o Sello: ").capitalize()
                 while user_guest != "Cara" and user_guest != "Sello":
@@ -46,6 +52,8 @@ class Coin_flip(Game):
                     print(graphics.cara,"\n")         #de alli se ve si erro o acerto y se hcae print de la moneda
                     if user_guest == coin:
                         print("ganaste")
+                        players[0].inventario.append(self.award)
+                        break
                     else:
                         print("perdiste")
                         players[0].vidas -= 1
@@ -56,6 +64,7 @@ class Coin_flip(Game):
                     print(graphics.sello,"\n")
                     if user_guest == coin:
                         print("ganaste")
+                        players[0].inventario.append(self.award)
                         break
                     else:
                         print("perdiste")

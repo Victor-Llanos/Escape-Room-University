@@ -1,5 +1,4 @@
 from Game import Game
-from Player import Player
 import requests
 
 api = requests.get("https://api-escapamet.vercel.app")
