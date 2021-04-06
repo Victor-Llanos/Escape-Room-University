@@ -13,6 +13,7 @@ class Player:
         print(f"Usuario: {self.user}\nPassword: {self.password}\nEdad: {self.age}\nAvatar: {self.avatar}\nDificultad: {self.dificultad}\nVidas: {self.vidas}\nPistas: {self.pistas}\nInventario:{self.inventario}\n")
     #Se usa un metedo que luego retornara todos los datos del usuario en la lista de main
 
+    
 
         
         

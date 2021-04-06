@@ -19,7 +19,7 @@ from Pasillo import Pasillo
 from Servidores import Servidores
 import collections
 import graphics
-import time 
+
 
 def get_avatar(avatares):
     avatares.append("Luis")
@@ -29,7 +29,7 @@ def get_avatar(avatares):
     avatares.append("Jorge")
     return avatares
 
-def registrar_player(players,):
+def registrar_player(players):
 
     avatares = ["Scharifker", "Eugenio Mendoza", "Pelusa", "Gandhi", "Camaron"]
     #Ademas de los avatares dados por el doc, se agrega a camaron

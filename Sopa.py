@@ -1,8 +1,7 @@
 from Game import Game
-from Player import Player
 import requests
-#from word_search_puzzle.utils import display_panel
-#from word_search_puzzle.algorithms import create_panel
+from word_search_puzzle.utils import display_panel
+from word_search_puzzle.algorithms import create_panel
 api = requests.get("https://api-escapamet.vercel.app")
 
 class Sopa(Game):
@@ -26,7 +25,7 @@ class Sopa(Game):
             words.append(self.data["answer_2"].lower())
             words.append(self.data["answer_3"].lower())
             print(words)
-            #result = create_panel(height=15, width=15, words_value_list=words) #Se crea la sopa de letra con una libreria especial
+            result = create_panel(height=15, width=15, words_value_list=words) #Se crea la sopa de letra con una libreria especial
             #display_panel(result.get('panel'))                                 #y se le pasa como palabras la lista de los nombre de la api
 
             pistas = []
